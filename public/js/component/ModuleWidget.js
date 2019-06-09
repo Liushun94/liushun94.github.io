@@ -33,7 +33,7 @@ class ModuleWidget {
     this.$view().show;
   }
   getImgSrc(src) {
-    return `./image/1/${src}`;
+    return `./public/image/1/${src}`;
   }
 }
 
