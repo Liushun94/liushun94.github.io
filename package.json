@@ -1,0 +1,26 @@
+{
+  "name": "birthday",
+  "version": "1.0.0",
+  "description": "happy birthday",
+  "main": "./script/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "live-server ./public --port=9000 -o"
+  },
+  "keywords": [
+    "birthday"
+  ],
+  "author": "ls",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sequence": "^1.0.0"
+  }
+}
