@@ -4,9 +4,13 @@ $(function () {
     let music = new MusicPanel();
 
     let notyf = new Notyf()
+    let notyf1 = new Notyf({
+        delay: 8000
+    })
 
     let instanceName, instance, name, module;
     instanceModule();
+    notyf1.confirm('由于网络原因，初始加载时各个页面的图片都无法加载完毕，会出现空白情况，可以多滑动几次，让浏览器将图片资源都加载缓存出来后，将有更好的观赏体验！')
 
     $(this).on('keydown', (e) => {
         if (e.keyCode === 38) { // 上页
@@ -25,7 +29,7 @@ $(function () {
                 _birthday.page += 1;
                 instanceModule();
             } else {
-                notyf.alert('正在火速制作中，敬请期待！！！');
+                notyf.alert('目前为v1.0.0版本展示内容，敬请期待！');
             }
         }
     });
@@ -60,7 +64,7 @@ $(function () {
                 _birthday.page += 1;
                 instanceModule();
             } else {
-                notyf.alert('正在火速制作中，敬请期待！！！');
+                notyf.alert('目前为v1.0.0版本展示内容，敬请期待！');
             }
         }
     })
