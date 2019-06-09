@@ -13,8 +13,8 @@ $(function () {
     notyf1.confirm('由于网络原因，初始加载时各个页面的图片都无法加载完毕，会出现空白情况，可以多滑动几次，让浏览器将图片资源都加载缓存出来后，将有更好的观赏体验！')
 
     $(this).on('keydown', (e) => {
-        if (e.keyCode === 38) { // 上页
-            if (_birthday.page > 0 && module.getView()) {
+        if (e.keyCode === 38 && module.getView()) { // 上页
+            if (_birthday.page > 0) {
                 module.getView().remove();
                 module.timer && clearInterval(module.timer);
                 _birthday.page -= 1;
@@ -46,8 +46,8 @@ $(function () {
             X = moveEndX - startX,
             Y = moveEndY - startY;
         //下滑
-        if (Y > 0) {
-            if (_birthday.page > 0 && module.getView()) {
+        if (Y > 0 && module.getView()) {
+            if (_birthday.page > 0) {
                 module.getView().remove();
                 module.timer && clearInterval(module.timer);
                 _birthday.page -= 1;
@@ -57,8 +57,8 @@ $(function () {
             }
         }
         //上滑
-        else if (Y < 0) {
-            if (_birthday.page < _birthday.config.panel.length - 1 && module.getView()) {
+        else if (Y < 0 && module.getView()) {
+            if (_birthday.page < _birthday.config.panel.length - 1) {
                 module.getView().remove();
                 module.timer && clearInterval(module.timer);
                 _birthday.page += 1;
