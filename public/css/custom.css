@@ -346,7 +346,12 @@ body {
     height: 100%;
     background-image: url("../image/1/7.jpg");
     background-size: cover;
-    background-position: center center; }
+    background-position: center center;
+    position: relative; }
+    #third .third_div .img.img1 {
+      background-image: url("../image/1/11.jpg");
+      background-size: contain;
+      background-position: center center; }
     #third .third_div .img .border {
       position: absolute;
       top: 50%;
@@ -373,18 +378,55 @@ body {
         top: 0; }
       #third .third_div .img .border1.bottom {
         bottom: 0; }
+    #third .third_div .img .flag {
+      position: absolute;
+      top: 0;
+      left: 75%;
+      width: 60px;
+      height: 60px;
+      background-color: #00ffff; }
+      #third .third_div .img .flag::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -20px;
+        border-top: 20px solid #00ffff;
+        border-right: 30px solid transparent; }
+      #third .third_div .img .flag::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -20px;
+        right: 0;
+        border-top: 20px solid #00ffff;
+        border-left: 30px solid transparent; }
+      #third .third_div .img .flag .text3 {
+        margin-top: 15px;
+        display: block;
+        border-top: 1px dashed #fff;
+        padding: 10px 2px;
+        font-size: 14px; }
+      #third .third_div .img .flag .text4 {
+        font-size: 14px;
+        position: absolute;
+        top: 27px;
+        left: 2px; }
+        #third .third_div .img .flag .text4.puffOut {
+          animation: 1s ease 0s infinite normal both running puffOut; }
   #third .third_div .text {
     position: absolute;
     top: 100px;
-    left: -80px;
+    left: -100px;
     transform: rotate(90deg);
     z-index: 10000;
     color: #fff;
     padding: 0 10px;
     background: #fff; }
-    #third .third_div .text.text2 {
-      animation: text 0.5s;
-      animation-iteration-count: 1; }
+    #third .third_div .text.textAnimate {
+      left: -80px;
+      animation: textAnimate 1s; }
 
 @keyframes borderLR {
   from {
@@ -398,8 +440,20 @@ body {
   to {
     width: 100%; } }
 
-@keyframes text {
+@keyframes textAnimate {
   from {
-    left: 0px; }
-  from {
-    left: -80px; } }
+    transform: rotate(90deg); }
+  to {
+    transform: rotate(450deg); } }
+
+@keyframes puffOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    -webkit-filter: blur(0px); }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    -webkit-filter: blur(2px); } }
