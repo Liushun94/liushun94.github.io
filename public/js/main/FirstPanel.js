@@ -20,8 +20,8 @@ class FirstPanel extends ModuleWidget {
           this.createTextFalg = false;
         }
 
-        clearInterval(this.interval);
-        this.interval = setInterval(() => {
+        clearInterval(this.timer);
+        this.timer = setInterval(() => {
           img1.removeClass('animated slideInRight')
             .addClass('animated fadeOut')
             .on('webkitAnimationEnd', () => {

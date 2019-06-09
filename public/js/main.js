@@ -12,6 +12,7 @@ $(function () {
         if (e.keyCode === 38) { // 上页
             if (_birthday.page > 0 && module.getView()) {
                 module.getView().remove();
+                module.timer && clearInterval(module.timer);
                 _birthday.page -= 1;
                 instanceModule();
             } else {
@@ -20,6 +21,7 @@ $(function () {
         } else if (e.keyCode === 40 && module.getView()) { // 下页
             if (_birthday.page < _birthday.config.panel.length - 1) {
                 module.getView().remove();
+                module.timer && clearInterval(module.timer);
                 _birthday.page += 1;
                 instanceModule();
             } else {
@@ -43,6 +45,7 @@ $(function () {
         if (Y > 0) {
             if (_birthday.page > 0 && module.getView()) {
                 module.getView().remove();
+                module.timer && clearInterval(module.timer);
                 _birthday.page -= 1;
                 instanceModule();
             } else {
@@ -53,6 +56,7 @@ $(function () {
         else if (Y < 0) {
             if (_birthday.page < _birthday.config.panel.length - 1 && module.getView()) {
                 module.getView().remove();
+                module.timer && clearInterval(module.timer);
                 _birthday.page += 1;
                 instanceModule();
             } else {
