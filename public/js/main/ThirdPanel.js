@@ -16,7 +16,7 @@ class ThirdPanel extends ModuleWidget {
           this.imgEnd = false;
         }
 
-        if(this.heartEnd){
+        if (this.heartEnd) {
           img.removeClass('img1');
 
           // this.text3.css('animation', '1s ease 0s infinite normal both running puffOut')
@@ -77,7 +77,7 @@ class ThirdPanel extends ModuleWidget {
           // })
           // this.text2.addClass('textAnimate');
           this.text2.remove();
-          $('<span class="text">HAPPY BIRTHDAY</span>').appendTo(this._img).css('color','#000').addClass('textAnimate')
+          $('<span class="text">HAPPY BIRTHDAY</span>').appendTo(this._img).css('color', '#000').addClass('textAnimate')
           // .addClass('animated rotateIn');
         }
       });
