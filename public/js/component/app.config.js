@@ -2,8 +2,8 @@
 this.birthday = {};
 
 this.birthday.config = {
-  // panel: ['HomePanel', 'FirstPanel', 'SecondPanel', 'ThirdPanel'],
-  panel: ['ThirdPanel'],
-  // panelName: ['home', 'first', 'second', 'third'],
-  panelName: ['third'],
+  panel: ['HomePanel', 'FirstPanel', 'SecondPanel', 'ThirdPanel'],
+  // panel: ['ThirdPanel'],
+  panelName: ['home', 'first', 'second', 'third'],
+  // panelName: ['third'],
 }
