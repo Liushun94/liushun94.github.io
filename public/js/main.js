@@ -1,3 +1,4 @@
+document.
 $(function () {
     let _birthday = window.birthday;
     _birthday.page = 0;
@@ -5,7 +6,7 @@ $(function () {
 
     let notyf = new Notyf()
     let notyf1 = new Notyf({
-        delay: 8000
+        delay: 4000
     })
 
     let instanceName, instance, name, module;

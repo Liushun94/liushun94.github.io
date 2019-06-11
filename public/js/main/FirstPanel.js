@@ -21,26 +21,6 @@ class FirstPanel extends ModuleWidget {
           this.createTextFalg = false;
         }
 
-        // clearInterval(this.timer);
-        // this.timer = setInterval(() => {
-        //   img1.removeClass('animated slideInRight')
-        //     .addClass('animated fadeOut')
-        //     .on('webkitAnimationEnd', () => {
-        //       if (this.imgFalg) {
-        //         if (this.carouseImg) {
-        //           img1.removeClass('img1 animated fadeOut').addClass('img2');
-        //           this.carouseImg = !this.carouseImg;
-        //         } else {
-        //           img1.removeClass('img2 animated fadeOut').addClass('img1');
-        //           this.carouseImg = !this.carouseImg;
-        //         }
-        //         this.imgFalg = !this.imgFalg;
-        //       }
-
-        //     })
-        // }, 1000);
-        // this.imgFalg = !this.imgFalg;
-
         this.timer = setInterval(e => {
           if (this.flag) {
             img1.animate({
