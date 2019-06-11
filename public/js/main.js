@@ -1,4 +1,3 @@
-document.
 $(function () {
     let _birthday = window.birthday;
     _birthday.page = 0;
