@@ -13,7 +13,7 @@ class FifthPanel extends ModuleWidget {
     this.timer = setInterval(e => {
       if (this.flag) {
         div.animate({
-          opacity: 0
+          opacity: 0.3
         }, 'fast', event => {
           div.addClass('img').animate({
             opacity: 1
@@ -22,7 +22,7 @@ class FifthPanel extends ModuleWidget {
         this.flag = !this.flag;
       } else {
         div.animate({
-          opacity: 0
+          opacity: 0.3
         }, 'fast', event => {
           div.removeClass('img').animate({
             opacity: 1

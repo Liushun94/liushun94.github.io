@@ -4,6 +4,7 @@ class FirstPanel extends ModuleWidget {
     this.carouseImg = true;
     this.imgFalg = true;
     this.createTextFalg = true;
+    this.flag = true;
   }
   createContent(parent) {
     this._parent = parent;
@@ -20,25 +21,47 @@ class FirstPanel extends ModuleWidget {
           this.createTextFalg = false;
         }
 
-        clearInterval(this.timer);
-        this.timer = setInterval(() => {
-          img1.removeClass('animated slideInRight')
-            .addClass('animated fadeOut')
-            .on('webkitAnimationEnd', () => {
-              if (this.imgFalg) {
-                if (this.carouseImg) {
-                  img1.removeClass('img1 animated fadeOut').addClass('img2');
-                  this.carouseImg = !this.carouseImg;
-                } else {
-                  img1.removeClass('img2 animated fadeOut').addClass('img1');
-                  this.carouseImg = !this.carouseImg;
-                }
-                this.imgFalg = !this.imgFalg;
-              }
+        // clearInterval(this.timer);
+        // this.timer = setInterval(() => {
+        //   img1.removeClass('animated slideInRight')
+        //     .addClass('animated fadeOut')
+        //     .on('webkitAnimationEnd', () => {
+        //       if (this.imgFalg) {
+        //         if (this.carouseImg) {
+        //           img1.removeClass('img1 animated fadeOut').addClass('img2');
+        //           this.carouseImg = !this.carouseImg;
+        //         } else {
+        //           img1.removeClass('img2 animated fadeOut').addClass('img1');
+        //           this.carouseImg = !this.carouseImg;
+        //         }
+        //         this.imgFalg = !this.imgFalg;
+        //       }
 
+        //     })
+        // }, 1000);
+        // this.imgFalg = !this.imgFalg;
+
+        this.timer = setInterval(e => {
+          if (this.flag) {
+            img1.animate({
+              opacity: 0.3
+            }, 'fast', event => {
+              img1.addClass('img2').animate({
+                opacity: 1
+              });
             })
-        }, 1000);
-        this.imgFalg = !this.imgFalg;
+            this.flag = !this.flag;
+          } else {
+            img1.animate({
+              opacity: 0.3
+            }, 'fast', event => {
+              img1.removeClass('img2').animate({
+                opacity: 1
+              });
+            })
+            this.flag = !this.flag;
+          }
+        }, 2000)
       });
   }
   createTextDiv(parent) {
