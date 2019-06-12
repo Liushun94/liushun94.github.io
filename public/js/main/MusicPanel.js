@@ -3,7 +3,7 @@ class MusicPanel {
   constructor() {
     this.create();
 
-    $('audio').attr('autoplay', false);
+    $('audio').attr('autoplay', true);
   }
   create() {
     let audio = $('audio').on('canplay', function () {
